@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1 data-text="CRUD" class="text-center mt-5">CRUD</h1>
+    <div class="container ">
+       
+        <div class="w-75 mx-auto py-5 ">
+            
+            <div class="form-group mb-3">
+                <label for="productName" class="form-label mb-2">productName :</label>
+                <input oninput="vlaidateProductName()" type="text" class="form-control bg-black text-white px-3 " id="productName" placeholder="productName">
+                <p id="wrongName" class="text-center py-md-2 my-md-3 d-none  mx-md-auto">InValid Name (make sure the first letter is a CAPITAL)</p>
+            </div>
+            <div class="form-group mb-3">
+                <label for="productPrice" class="form-label mb-2">productPrice :</label>
+                <input oninput="vlaidateProductPrice()" type="number" class="form-control bg-black text-white px-3" id="productPrice" placeholder="productPrice">
+                <p id="wrongPrice" class="text-center py-md-2 my-md-3 d-none  mx-md-auto">make sure the price is between (1000//100000)</p>
+            </div>
+            <div class="form-group mb-3">
+                <label for="productModel" class="form-label mb-2">productModel :</label>
+                <input oninput="vlaidateProductModel()" type="text" class="form-control bg-black text-white px-3" id="productModel" placeholder="productModel">
+                <p id="wrongmodel" class="text-center py-md-2 my-md-3 d-none  mx-md-auto">make sure the model is one of (tv / mobile / laptop)</p>
+            </div>
+            <div class="form-group mb-3">
+                <label for="productDesc" class="form-label mb-2">productDesc :</label>
+                <textarea oninput="vlaidateProductdesc()" name="productDesc" id="productDesc" class="form-control bg-black text-white" cols="30" rows="5"
+                    placeholder="productDesc"></textarea>
+                    <p id="wrongdesc" class="text-center py-md-2 my-md-3 d-none  mx-md-auto">The number of characters must not be less than (50) and not more than (300) characters</p>
+            </div>
+
+            <button onclick="AddProduct()" id="myBtn">
+                <span id="mySpan">Add Product</span>
+                <i></i>
+            </button>
+            <div class="form-group mt-5">
+                <input oninput="search(this.value)" type="text" placeholder="search for any product" class="form-control bg-black text-white rounded-5 px-3 py-2">
+            </div>
+
+
+        </div>
+
+
+        <table class="table table-dark table-bordered text-center table-responsive w-75 mx-md-auto ">
+            <thead>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Model</th>
+                <th>Desc</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tBody">
+               
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

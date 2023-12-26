@@ -1,0 +1,153 @@
+body{
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    color: #000;
+    -webkit-text-stroke: 0.1vw #fff;
+    line-height: 0.80em;
+    outline: none;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+   
+}
+
+
+
+
+
+h1::before{
+    content:attr(data-text);
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 0;
+    height: 100%;
+    color: red;
+    -webkit-text-stroke: 0.1vw #fff;
+    border-right: 6px solid red;
+    overflow: hidden;
+animation: animation 6s linear infinite;
+}
+
+
+@keyframes animation{
+    0%,10%,100%{
+        width: 0%;
+    }
+        
+    70%,90%{
+        width: 100%;
+} 
+}
+
+textarea{
+    resize: none;
+}
+p{
+    background-color: #D80032;
+    color: #000;
+    font-size: 18px;
+    
+}
+
+#myBtn{
+    position: relative;
+    background:  linear-gradient(black, white);
+    color: red;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    transition: all 2s ease-in-out;
+    box-shadow: 0 0 10px black,0 0 20px black,0 0 40px white;
+   
+}
+#myBtn:hover{
+    background: linear-gradient(black,red);
+    color: #fff;
+    box-shadow: 0 0 10px white,0 0 20px white,0 0 40px red,0 0 80px red,0 0 160px red;
+}
+.td-desc{
+    word-wrap: break-word;
+}
+/* #myBtn:hover{
+letter-spacing: 0.2rem;
+padding: 1.1rem 3.2rem;
+background-color: red;
+animation: box 3s linear infinite;
+}
+#myBtn::before{
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background-color: black;
+}
+#myBtn span{
+    position: relative;
+    z-index: 1;
+}
+#myBtn i{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+#myBtn i::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 80%;
+    top: -2px;
+    border: 2px solid red;
+    background-color: black;
+    transition: 0.2s;
+}
+#myBtn:hover i::before{
+    width: 15px;
+    left: 20%;
+    animation: move 3s linear infinite;
+
+}
+#myBtn i::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 20%;
+    bottom: -2px;
+    border: 2px solid red;
+    background-color: black;
+    transition: 0.2s;
+    
+}
+#myBtn:hover i::after{
+    width: 15px;
+    left: 80%;
+    animation: move 3s linear infinite;
+}
+@keyframes move{
+    0%,100%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(20px);
+    }
+}
+@keyframes box{
+    0%,100%{
+        box-shadow:0 0  white;
+    }
+    50%{
+        box-shadow: 0 0 80px red;
+    }
+} */
